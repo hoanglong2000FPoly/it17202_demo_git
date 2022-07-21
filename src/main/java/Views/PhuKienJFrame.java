@@ -5,7 +5,7 @@
 package Views;
 
 import DomainModels.SanPham;
-import Repostory.SanPhamServiceForm;
+import Sevirce.SanPhamServiceForm;
 import java.util.List;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.table.DefaultTableModel;

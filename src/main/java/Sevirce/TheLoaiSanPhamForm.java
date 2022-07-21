@@ -2,10 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Repostory;
+package Sevirce;
 
 import DomainModels.TheLoaiSanPham;
-import Services.TheLoaiSanPhamDAO;
+import Repositories.TheLoaiSanPhamDAO;
 import ViewModels.TheLoaiSanPhamView;
 import java.util.List;
 

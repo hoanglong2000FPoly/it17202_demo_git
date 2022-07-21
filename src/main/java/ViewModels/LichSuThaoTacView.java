@@ -11,6 +11,8 @@ import java.util.Date;
  * @author Dell
  */
 public class LichSuThaoTacView {
+    
+    private int STT;
       private String MaNhanVien;
     
     
@@ -29,7 +31,8 @@ public class LichSuThaoTacView {
     public LichSuThaoTacView() {
     }
 
-    public LichSuThaoTacView(String MaNhanVien, String ThaoTac, String ChiTiet, Date ThoiGianThaoTac, String ViTriThaoTac, String GiaTriCu, String GiaTriMoi) {
+    public LichSuThaoTacView(int STT, String MaNhanVien, String ThaoTac, String ChiTiet, Date ThoiGianThaoTac, String ViTriThaoTac, String GiaTriCu, String GiaTriMoi) {
+        this.STT = STT;
         this.MaNhanVien = MaNhanVien;
         this.ThaoTac = ThaoTac;
         this.ChiTiet = ChiTiet;
@@ -37,6 +40,14 @@ public class LichSuThaoTacView {
         this.ViTriThaoTac = ViTriThaoTac;
         this.GiaTriCu = GiaTriCu;
         this.GiaTriMoi = GiaTriMoi;
+    }
+
+    public int getSTT() {
+        return STT;
+    }
+
+    public void setSTT(int STT) {
+        this.STT = STT;
     }
 
     public String getMaNhanVien() {
@@ -94,6 +105,8 @@ public class LichSuThaoTacView {
     public void setGiaTriMoi(String GiaTriMoi) {
         this.GiaTriMoi = GiaTriMoi;
     }
+
+    
     
     
 }

@@ -4,7 +4,7 @@
  */
 package Views;
 
-import Repostory.NhanVienServiceForm;
+import Sevirce.NhanVienServiceForm;
 import ViewModels.NhanVienView;
 import java.util.List;
 import javax.swing.JOptionPane;
@@ -155,15 +155,18 @@ public class DangNhapJFrame extends javax.swing.JFrame {
         
         if(dn==0){
             JOptionPane.showMessageDialog(this, "Bạn đã đăng nhập với vai trò Admin");
-            new TrangChuJFrame().setVisible(true);
+            this.setVisible(false);
+            new TrangChuJFrame(txtUserName.getText()).setVisible(true);
         } else if(dn==1){
              JOptionPane.showMessageDialog(this, "Bạn đã đăng nhập với vai trò User");
+             this.setVisible(false);
+             new TrangChuUserJFrame(txtUserName.getText()).setVisible(true);
              
         } else {
              JOptionPane.showMessageDialog(this, "Sai tài khoản hoặc mật khẩu");
         }
     }//GEN-LAST:event_btnDangnhapActionPerformed
-  
+
    public int dangNhap(String user,String pass){
        List<DomainModels.NhanVien> lst = listNhanVien();
        for (DomainModels.NhanVien x : lst) {

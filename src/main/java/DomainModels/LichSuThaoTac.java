@@ -8,11 +8,18 @@ import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
-
+@Entity
 @Table(name = "LichSuThaoTac")
 public class LichSuThaoTac implements Serializable{
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int STT;
+    
     @Column
     private String MaNhanVien;
     
@@ -31,15 +38,14 @@ public class LichSuThaoTac implements Serializable{
 
     public LichSuThaoTac() {
     }
+    
 
-    public LichSuThaoTac(String MaNhanVien, String ThaoTac, String ChiTiet, Date ThoiGianThaoTac, String ViTriThaoTac, String GiaTriCu, String GiaTriMoi) {
-        this.MaNhanVien = MaNhanVien;
-        this.ThaoTac = ThaoTac;
-        this.ChiTiet = ChiTiet;
-        this.ThoiGianThaoTac = ThoiGianThaoTac;
-        this.ViTriThaoTac = ViTriThaoTac;
-        this.GiaTriCu = GiaTriCu;
-        this.GiaTriMoi = GiaTriMoi;
+    public int getSTT() {
+        return STT;
+    }
+
+    public void setSTT(int STT) {
+        this.STT = STT;
     }
 
     public String getMaNhanVien() {
@@ -97,6 +103,18 @@ public class LichSuThaoTac implements Serializable{
     public void setGiaTriMoi(String GiaTriMoi) {
         this.GiaTriMoi = GiaTriMoi;
     }
+
+    public LichSuThaoTac(int STT, String MaNhanVien, String ThaoTac, String ChiTiet, Date ThoiGianThaoTac, String ViTriThaoTac, String GiaTriCu, String GiaTriMoi) {
+        this.STT = STT;
+        this.MaNhanVien = MaNhanVien;
+        this.ThaoTac = ThaoTac;
+        this.ChiTiet = ChiTiet;
+        this.ThoiGianThaoTac = ThoiGianThaoTac;
+        this.ViTriThaoTac = ViTriThaoTac;
+        this.GiaTriCu = GiaTriCu;
+        this.GiaTriMoi = GiaTriMoi;
+    }
+
     
     
     

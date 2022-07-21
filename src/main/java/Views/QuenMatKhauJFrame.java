@@ -4,7 +4,7 @@
  */
 package Views;
 
-import Repostory.NhanVienServiceForm;
+import Sevirce.NhanVienServiceForm;
 
 
 import jakarta.mail.Authenticator;

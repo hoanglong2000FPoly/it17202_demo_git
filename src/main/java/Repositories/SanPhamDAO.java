@@ -2,11 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Services;
+package Repositories;
 
 import DomainModels.NhanVien;
+import DomainModels.SanPham;
 import Ultilities.HibernateUltis;
-import ViewModels.NhanVienView;
 import java.util.List;
 import javax.persistence.Query;
 import javax.persistence.TypedQuery;
@@ -17,14 +17,15 @@ import org.hibernate.Transaction;
  *
  * @author Dell
  */
-public class NhanVienServiceDAO {
+public class SanPhamDAO {
     
-    public String themNhanVien(NhanVien nv){
+    
+    public String themSanPham(SanPham sp){
         try(Session ss = HibernateUltis.getSessionFactory().openSession()){
             Transaction tran = ss.getTransaction();
             tran.begin();
             try {
-                ss.save(nv);
+                ss.save(sp);
                 tran.commit();
             } catch (Exception e) {
                 tran.rollback();
@@ -32,48 +33,53 @@ public class NhanVienServiceDAO {
             }
         }
         return "Thêm thành công nhé!";
-        
-    }
-        public String suaNhanVien(NhanVien nv){
+        }
+        public String suaSanPham(SanPham sp){
         try(Session ss = HibernateUltis.getSessionFactory().openSession()){
             Transaction tran = ss.getTransaction();
             tran.begin();
             try {
-                ss.update(nv);
+                ss.update(sp);
                 tran.commit();
             } catch (Exception e) {
                 tran.rollback();
-                return "Lỗi";
+                return "Sửa không thành công";
             }
         }
         return "Sửa thành công nhé!";
-        
-    }
+        }
     
-    public  List<NhanVien> listNhanVien(){
-        List<NhanVien> list;
+    public List<SanPham> listSanPham(){
+        List<SanPham> list;
         try(Session ss = HibernateUltis.getSessionFactory().openSession()){
-            String sql = "select x from NhanVien x";
-            TypedQuery<NhanVien> type = ss.createQuery(sql,NhanVien.class);
+            String sql = "select x from SanPham x";
+            TypedQuery<SanPham> type = ss.createQuery(sql,SanPham.class);
             list = type.getResultList();
         }
         return list;
     }
-    
-    public String passNhanVien(String user,String email){
-          String pass = null;
-        String err = null;
-        try ( org.hibernate.Session ss = HibernateUltis.getSessionFactory().openSession()) {
-            String ten = "select MatKhau from NhanVien where MaNhanVien =: manhanvien and Email =:email ";
-            Query qr = ss.createQuery(ten);
-            qr.setParameter("manhanvien", user);
-            qr.setParameter("email", email);
-            pass = (String) qr.getSingleResult();
-        } catch (Exception e) {
-            err = "Rỗng";
-            return err;
+    public String tenSanPham(String masp){
+        String name;
+        try(Session ss = HibernateUltis.getSessionFactory().openSession()){
+            String sql = "select TenSanPham from SanPham where MaSanPham =: masp";
+            Query qr = ss.createQuery(sql);
+            qr.setParameter("masp", masp);
+            name = String.valueOf( qr.getSingleResult());
         }
-
-        return pass;
+        return name;
     }
-}
+    
+    public int soLuongSanPham(String masp){
+        int soluong;
+        try(Session ss = HibernateUltis.getSessionFactory().openSession()){
+            String sql = "select SoLuong from SanPham where MaSanPham =: masp";
+            Query qr = ss.createQuery(sql);
+            qr.setParameter("masp", masp);
+            soluong = (int) qr.getSingleResult();
+        }
+        return soluong;
+    }
+    
+    }
+    
+

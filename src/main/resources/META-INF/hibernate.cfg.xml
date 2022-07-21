@@ -11,7 +11,7 @@
         </property>
 
         <property name="connection.url">
-            jdbc:sqlserver://localhost:1433;databaseName=DuAn1_QLSP_Pod;
+            jdbc:sqlserver://localhost:1433;databaseName=DuAn1_QLSP_Pod1;
         </property>
 
         <property name="connection.username">longdeptrai</property>

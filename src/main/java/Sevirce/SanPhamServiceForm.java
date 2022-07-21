@@ -2,10 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Repostory;
+package Sevirce;
 
 import DomainModels.SanPham;
-import Services.SanPhamDAO;
+import Repositories.SanPhamDAO;
 import ViewModels.SanPhamView;
 import java.util.List;
 
@@ -31,6 +31,12 @@ public class SanPhamServiceForm {
     }
      public List<SanPham> listSanPham(){
          return spDao.listSanPham();
+     }
+     public String tenSanPham(String masp){
+         return spDao.tenSanPham(masp);
+     }
+     public int soLuongSanPham(String masp){
+         return spDao.soLuongSanPham(masp);
      }
 
 }
