@@ -38,6 +38,10 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jpn" max="32767" attributes="0"/>
+              </Group>
               <Group type="102" alignment="1" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
@@ -122,11 +126,6 @@
                       </Group>
                   </Group>
               </Group>
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jpn" max="32767" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
@@ -158,19 +157,17 @@
                       <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="btnTheLoai" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="btnHoaDon" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnBaoHanh" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnDoanhThu" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnLichSu" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnDangXuat" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnKhachHang" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnSanPham" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnNhanVien" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
-                          <Component id="btnPhuKien" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="btnHoaDon" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnBaoHanh" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnDoanhThu" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnLichSu" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnDangXuat" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnKhachHang" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnSanPham" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnNhanVien" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                      <Component id="btnPhuKien" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                   <Component id="jpn" pref="542" max="32767" attributes="0"/>
