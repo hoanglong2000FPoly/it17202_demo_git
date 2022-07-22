@@ -2,38 +2,29 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package DomainModels;
+package ViewModels;
 
-import java.io.Serializable;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-
-    
-
-@Entity
-@Table(name = "KhachHang")
-public class KhachHang implements Serializable {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+/**
+ *
+ * @author Dell
+ */
+public class KhachHangView {
     private int MaKhachHang;
-    private String TenKHachHang;
+    
+    private String TenKhachHang;
+    
     private int GioiTinh;
+    
     private String Email;
-
+    
     private String SDT;
 
-    public KhachHang() {
+    public KhachHangView() {
     }
 
-    public KhachHang(int MaKhachHang, String TenKHachHang, int GioiTinh, String Email, String SDT) {
+    public KhachHangView(int MaKhachHang, String TenKhachHang, int GioiTinh, String Email, String SDT) {
         this.MaKhachHang = MaKhachHang;
-        this.TenKHachHang = TenKHachHang;
-
+        this.TenKhachHang = TenKhachHang;
         this.GioiTinh = GioiTinh;
         this.Email = Email;
         this.SDT = SDT;
@@ -47,16 +38,12 @@ public class KhachHang implements Serializable {
         this.MaKhachHang = MaKhachHang;
     }
 
-
-
-
-    public String getTenKHachHang() {
-        return TenKHachHang;
+    public String getTenKhachHang() {
+        return TenKhachHang;
     }
 
-    public void setTenKHachHang(String TenKHachHang) {
-        this.TenKHachHang = TenKHachHang;
-
+    public void setTenKhachHang(String TenKhachHang) {
+        this.TenKhachHang = TenKhachHang;
     }
 
     public int getGioiTinh() {
@@ -82,5 +69,5 @@ public class KhachHang implements Serializable {
     public void setSDT(String SDT) {
         this.SDT = SDT;
     }
-
+    
 }

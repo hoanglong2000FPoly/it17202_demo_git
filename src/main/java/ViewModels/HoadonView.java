@@ -2,37 +2,29 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package DomainModels;
+package ViewModels;
 
-
-import java.io.Serializable;
+import DomainModels.KhachHang;
+import DomainModels.NhanVien;
 import java.util.Date;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
 
-@Entity
-@Table(name = "HoaDon")
-public class HoaDon implements  Serializable{
-    @Id
-    private String MaHoaDon;
+/**
+ *
+ * @author Dell
+ */
+public class HoadonView {
+     private String MaHoaDon;
     
     private Date NgayTao;
     
-    @ManyToOne
-    @JoinColumn(name = "MaKhachHang")
     private KhachHang MaKhachHang;
     
-    @ManyToOne
-    @JoinColumn(name = "MaNhanVien")
     private NhanVien MaNhanVien;
 
-    public HoaDon() {
+    public HoadonView() {
     }
 
-    public HoaDon(String MaHoaDon, Date NgayTao, KhachHang MaKhachHang, NhanVien MaNhanVien) {
+    public HoadonView(String MaHoaDon, Date NgayTao, KhachHang MaKhachHang, NhanVien MaNhanVien) {
         this.MaHoaDon = MaHoaDon;
         this.NgayTao = NgayTao;
         this.MaKhachHang = MaKhachHang;
@@ -70,6 +62,5 @@ public class HoaDon implements  Serializable{
     public void setMaNhanVien(NhanVien MaNhanVien) {
         this.MaNhanVien = MaNhanVien;
     }
-
     
 }

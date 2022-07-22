@@ -2,25 +2,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package DomainModels;
+package ViewModels;
 
-import java.io.Serializable;
 import java.util.Date;
 
-import javax.persistence.Column;
-
-
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-
-
-@Entity
-@Table(name = "NhanVien")
-public class NhanVien implements Serializable {
-
-    @Id
+/**
+ *
+ * @author Dell
+ */
+public class NhanVienView {
+    
     private String MaNhanVien;
     private String TenNhanVien;
     private String MatKhau;
@@ -29,23 +20,7 @@ public class NhanVien implements Serializable {
     private String DiaChi;
     private String Email;
     private String SDT;
-
     private int VaiTro;
-
-    public NhanVien() {
-    }
-
-    public NhanVien(String MaNhanVien, String TenNhanVien, String MatKhau, Date NgaySinh, int GioiTinh, String DiaChi, String Email, String SDT, int VaiTro) {
-        this.MaNhanVien = MaNhanVien;
-        this.TenNhanVien = TenNhanVien;
-        this.MatKhau = MatKhau;
-        this.NgaySinh = NgaySinh;
-        this.GioiTinh = GioiTinh;
-        this.DiaChi = DiaChi;
-        this.Email = Email;
-        this.SDT = SDT;
-        this.VaiTro = VaiTro;
-    }
 
     public String getMaNhanVien() {
         return MaNhanVien;
@@ -119,4 +94,19 @@ public class NhanVien implements Serializable {
         this.VaiTro = VaiTro;
     }
 
+    public NhanVienView(String MaNhanVien, String TenNhanVien, String MatKhau, Date NgaySinh, int GioiTinh, String DiaChi, String Email, String SDT, int VaiTro) {
+        this.MaNhanVien = MaNhanVien;
+        this.TenNhanVien = TenNhanVien;
+        this.MatKhau = MatKhau;
+        this.NgaySinh = NgaySinh;
+        this.GioiTinh = GioiTinh;
+        this.DiaChi = DiaChi;
+        this.Email = Email;
+        this.SDT = SDT;
+        this.VaiTro = VaiTro;
+    }
+
+    public NhanVienView() {
+    }
+    
 }

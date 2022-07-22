@@ -2,41 +2,32 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package DomainModels;
+package ViewModels;
 
-import java.io.Serializable;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
-
-
+import DomainModels.SanPham;
 
 /**
  *
- * @author admin
+ * @author Dell
  */
-@Entity
-@Table(name = "PhuKien")
-public class PhuKien implements Serializable {
-
-    @Id
-    private String MaPhuKien;
+public class PhuKienView {
+     private String MaPhuKien;
+    
     private String TenPhuKien;
+    
     private int SoLuong;
+    
     private float GiaNhap;
+    
     private float GiaBan;
+    
     private String DienTro;
-
-    @ManyToOne
-    @JoinColumn(name = "MaSanPham")
     private SanPham MaSanPham;
 
-    public PhuKien() {
+    public PhuKienView() {
     }
 
-    public PhuKien(String MaPhuKien, String TenPhuKien, int SoLuong, float GiaNhap, float GiaBan, String DienTro, SanPham MaSanPham) {
+    public PhuKienView(String MaPhuKien, String TenPhuKien, int SoLuong, float GiaNhap, float GiaBan, String DienTro, SanPham MaSanPham) {
         this.MaPhuKien = MaPhuKien;
         this.TenPhuKien = TenPhuKien;
         this.SoLuong = SoLuong;
@@ -101,5 +92,5 @@ public class PhuKien implements Serializable {
     public void setMaSanPham(SanPham MaSanPham) {
         this.MaSanPham = MaSanPham;
     }
-
+    
 }

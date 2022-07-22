@@ -2,41 +2,30 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package DomainModels;
+package ViewModels;
 
+import DomainModels.HoaDon;
+import DomainModels.SanPham;
 
-import java.io.Serializable;
-import javax.persistence.Column;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
-import javax.persistence.Table;
-
-@Table(name = "HDCT")
-public class HDCT implements Serializable{
-    
-    @ManyToMany
-    @JoinColumn(name = "MaHoaDon")
+/**
+ *
+ * @author Dell
+ */
+public class HDCTView {
     private HoaDon MaHoaDon;
     
-    @ManyToMany
-    @JoinColumn(name = "MaSanPham")
     private SanPham MaSanPham;
     
-    @Column
     private float DonGia;
     
-    
-    @Column
     private int SoLuong;
     
-    
-    @Column
     private float TongTien;
 
-    public HDCT() {
+    public HDCTView() {
     }
 
-    public HDCT(HoaDon MaHoaDon, SanPham MaSanPham, float DonGia, int SoLuong, float TongTien) {
+    public HDCTView(HoaDon MaHoaDon, SanPham MaSanPham, float DonGia, int SoLuong, float TongTien) {
         this.MaHoaDon = MaHoaDon;
         this.MaSanPham = MaSanPham;
         this.DonGia = DonGia;
@@ -84,7 +73,4 @@ public class HDCT implements Serializable{
         this.TongTien = TongTien;
     }
     
-    
-    
 }
-

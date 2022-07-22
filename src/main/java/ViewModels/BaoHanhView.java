@@ -2,38 +2,34 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package DomainModels;
+package ViewModels;
 
-import java.io.Serializable;
+import DomainModels.KhachHang;
+import DomainModels.NhanVien;
+import DomainModels.SanPham;
 import java.util.Date;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
 
-@Entity
-@Table(name = "BaoHanh")
-public class BaoHanh implements Serializable {
-
-    @Id
+/**
+ *
+ * @author Dell
+ */
+public class BaoHanhView {
     private String MaBaoHanh;
+    
     private Date NgayMua;
+    
     private String MoTa;
-    @ManyToOne
-    @JoinColumn(name = "MaSanPham")
+    
     private SanPham MaSanPham;
-    @ManyToOne
-    @JoinColumn(name = "MaKhachHang")
+    
     private KhachHang MaKhachHang;
-    @ManyToOne
-    @JoinColumn(name = "MaNhanVien")
+    
     private NhanVien MaNhanVien;
 
-    public BaoHanh() {
+    public BaoHanhView() {
     }
 
-    public BaoHanh(String MaBaoHanh, Date NgayMua, String MoTa, SanPham MaSanPham, KhachHang MaKhachHang, NhanVien MaNhanVien) {
+    public BaoHanhView(String MaBaoHanh, Date NgayMua, String MoTa, SanPham MaSanPham, KhachHang MaKhachHang, NhanVien MaNhanVien) {
         this.MaBaoHanh = MaBaoHanh;
         this.NgayMua = NgayMua;
         this.MoTa = MoTa;
@@ -89,4 +85,5 @@ public class BaoHanh implements Serializable {
     public void setMaNhanVien(NhanVien MaNhanVien) {
         this.MaNhanVien = MaNhanVien;
     }
+    
 }

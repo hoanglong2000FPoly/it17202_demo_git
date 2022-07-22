@@ -2,27 +2,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package DomainModels;
+package ViewModels;
 
-import java.io.Serializable;
+import DomainModels.TheLoaiSanPham;
 import java.util.Date;
 
-import javax.persistence.Column;
-
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
-
-
-@Entity
-@Table(name = "SanPham")
-public class SanPham implements Serializable {
-
-
-    @Id
-    private String MaSanPham;
+/**
+ *
+ * @author Dell
+ */
+public class SanPhamView {
+     private String MaSanPham;
     private String TenSanPham;
     private int SoLuong;
     private Date NamSanXuat;
@@ -33,19 +23,12 @@ public class SanPham implements Serializable {
     private String CongSuat;
     private String Pin;
     private String MoTa;
-
-    
-
-    @ManyToOne
-    @JoinColumn(name = "MaTheLoai")
     private TheLoaiSanPham MaTheLoai;
 
-
-    public SanPham() {
+    public SanPhamView() {
     }
 
-    public SanPham(String MaSanPham, String TenSanPham, int SoLuong, Date NamSanXuat, String HangSanXuat, float GiaNhap, float GiaBan, float DungTich, String CongSuat, String Pin, String MoTa, TheLoaiSanPham MaTheLoai) {
-
+    public SanPhamView(String MaSanPham, String TenSanPham, int SoLuong, Date NamSanXuat, String HangSanXuat, float GiaNhap, float GiaBan, float DungTich, String CongSuat, String Pin, String MoTa, TheLoaiSanPham MaTheLoai) {
         this.MaSanPham = MaSanPham;
         this.TenSanPham = TenSanPham;
         this.SoLuong = SoLuong;
@@ -148,11 +131,6 @@ public class SanPham implements Serializable {
         this.MoTa = MoTa;
     }
 
-
-    
-    
-    
-
     public TheLoaiSanPham getMaTheLoai() {
         return MaTheLoai;
     }
@@ -160,6 +138,5 @@ public class SanPham implements Serializable {
     public void setMaTheLoai(TheLoaiSanPham MaTheLoai) {
         this.MaTheLoai = MaTheLoai;
     }
-
-
+    
 }

@@ -2,44 +2,45 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package DomainModels;
+package ViewModels;
 
-
-import java.io.Serializable;
 import java.util.Date;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
-@Entity
-@Table(name = "LichSuThaoTac")
-public class LichSuThaoTac implements Serializable{
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+/**
+ *
+ * @author Dell
+ */
+public class LichSuThaoTacView {
+    
     private int STT;
+      private String MaNhanVien;
     
-    @Column
-    private String MaNhanVien;
     
-    @Column
     private String ThaoTac;
-    @Column
+ 
     private String ChiTiet;
-    @Column
+    
     private Date ThoiGianThaoTac;
-    @Column
+    
     private String ViTriThaoTac;
-    @Column
+    
     private String GiaTriCu;
-    @Column
+    
     private String GiaTriMoi;
 
-    public LichSuThaoTac() {
+    public LichSuThaoTacView() {
     }
-    
+
+    public LichSuThaoTacView(int STT, String MaNhanVien, String ThaoTac, String ChiTiet, Date ThoiGianThaoTac, String ViTriThaoTac, String GiaTriCu, String GiaTriMoi) {
+        this.STT = STT;
+        this.MaNhanVien = MaNhanVien;
+        this.ThaoTac = ThaoTac;
+        this.ChiTiet = ChiTiet;
+        this.ThoiGianThaoTac = ThoiGianThaoTac;
+        this.ViTriThaoTac = ViTriThaoTac;
+        this.GiaTriCu = GiaTriCu;
+        this.GiaTriMoi = GiaTriMoi;
+    }
 
     public int getSTT() {
         return STT;
@@ -105,19 +106,7 @@ public class LichSuThaoTac implements Serializable{
         this.GiaTriMoi = GiaTriMoi;
     }
 
-    public LichSuThaoTac(int STT, String MaNhanVien, String ThaoTac, String ChiTiet, Date ThoiGianThaoTac, String ViTriThaoTac, String GiaTriCu, String GiaTriMoi) {
-        this.STT = STT;
-        this.MaNhanVien = MaNhanVien;
-        this.ThaoTac = ThaoTac;
-        this.ChiTiet = ChiTiet;
-        this.ThoiGianThaoTac = ThoiGianThaoTac;
-        this.ViTriThaoTac = ViTriThaoTac;
-        this.GiaTriCu = GiaTriCu;
-        this.GiaTriMoi = GiaTriMoi;
-    }
-
     
     
-
     
 }
