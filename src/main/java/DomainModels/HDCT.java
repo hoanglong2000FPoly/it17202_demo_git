@@ -4,6 +4,7 @@
  */
 package DomainModels;
 
+
 import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.JoinColumn;
@@ -85,5 +86,5 @@ public class HDCT implements Serializable{
     
     
     
-    
 }
+

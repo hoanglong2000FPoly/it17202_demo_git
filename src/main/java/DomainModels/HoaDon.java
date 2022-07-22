@@ -4,6 +4,7 @@
  */
 package DomainModels;
 
+
 import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Entity;
@@ -69,5 +70,6 @@ public class HoaDon implements  Serializable{
     public void setMaNhanVien(NhanVien MaNhanVien) {
         this.MaNhanVien = MaNhanVien;
     }
+
     
 }

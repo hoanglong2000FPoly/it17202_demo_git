@@ -2,25 +2,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package DomainModels;
+package ViewModel;
 
-import java.io.Serializable;
 import java.util.Date;
 
-import javax.persistence.Column;
+/**
+ *
+ * @author admin
+ */
+public class NhanVienMD {
 
-
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-
-
-@Entity
-@Table(name = "NhanVien")
-public class NhanVien implements Serializable {
-
-    @Id
     private String MaNhanVien;
     private String TenNhanVien;
     private String MatKhau;
@@ -29,13 +20,12 @@ public class NhanVien implements Serializable {
     private String DiaChi;
     private String Email;
     private String SDT;
-
     private int VaiTro;
 
-    public NhanVien() {
+    public NhanVienMD() {
     }
 
-    public NhanVien(String MaNhanVien, String TenNhanVien, String MatKhau, Date NgaySinh, int GioiTinh, String DiaChi, String Email, String SDT, int VaiTro) {
+    public NhanVienMD(String MaNhanVien, String TenNhanVien, String MatKhau, Date NgaySinh, int GioiTinh, String DiaChi, String Email, String SDT, int VaiTro) {
         this.MaNhanVien = MaNhanVien;
         this.TenNhanVien = TenNhanVien;
         this.MatKhau = MatKhau;

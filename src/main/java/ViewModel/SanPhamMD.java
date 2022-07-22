@@ -2,26 +2,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package DomainModels;
+package ViewModel;
 
-import java.io.Serializable;
+import DomainModels.TheLoai;
 import java.util.Date;
 
-import javax.persistence.Column;
+/**
+ *
+ * @author admin
+ */
+public class SanPhamMD {
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
-
-
-@Entity
-@Table(name = "SanPham")
-public class SanPham implements Serializable {
-
-
-    @Id
     private String MaSanPham;
     private String TenSanPham;
     private int SoLuong;
@@ -33,19 +24,12 @@ public class SanPham implements Serializable {
     private String CongSuat;
     private String Pin;
     private String MoTa;
+    private TheLoai MatheLoai;
 
-    
-
-    @ManyToOne
-    @JoinColumn(name = "MaTheLoai")
-    private TheLoaiSanPham MaTheLoai;
-
-
-    public SanPham() {
+    public SanPhamMD() {
     }
 
-    public SanPham(String MaSanPham, String TenSanPham, int SoLuong, Date NamSanXuat, String HangSanXuat, float GiaNhap, float GiaBan, float DungTich, String CongSuat, String Pin, String MoTa, TheLoaiSanPham MaTheLoai) {
-
+    public SanPhamMD(String MaSanPham, String TenSanPham, int SoLuong, Date NamSanXuat, String HangSanXuat, float GiaNhap, float GiaBan, float DungTich, String CongSuat, String Pin, String MoTa, TheLoai MatheLoai) {
         this.MaSanPham = MaSanPham;
         this.TenSanPham = TenSanPham;
         this.SoLuong = SoLuong;
@@ -57,7 +41,7 @@ public class SanPham implements Serializable {
         this.CongSuat = CongSuat;
         this.Pin = Pin;
         this.MoTa = MoTa;
-        this.MaTheLoai = MaTheLoai;
+        this.MatheLoai = MatheLoai;
     }
 
     public String getMaSanPham() {
@@ -148,18 +132,13 @@ public class SanPham implements Serializable {
         this.MoTa = MoTa;
     }
 
-
-    
-    
-    
-
-    public TheLoaiSanPham getMaTheLoai() {
-        return MaTheLoai;
+    public TheLoai getMatheLoai() {
+        return MatheLoai;
     }
 
-    public void setMaTheLoai(TheLoaiSanPham MaTheLoai) {
-        this.MaTheLoai = MaTheLoai;
+    public void setMatheLoai(TheLoai MatheLoai) {
+        this.MatheLoai = MatheLoai;
     }
 
-
+    
 }

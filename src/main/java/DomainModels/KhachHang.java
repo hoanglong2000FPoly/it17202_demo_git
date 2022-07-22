@@ -11,27 +11,29 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
+    
+
 @Entity
-@Table(name ="KhachHang")
-public class KhachHang implements Serializable{
+@Table(name = "KhachHang")
+public class KhachHang implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int MaKhachHang;
-    
-    private String TenKhachHang;
-    
+    private String TenKHachHang;
     private int GioiTinh;
-    
     private String Email;
-    
+
     private String SDT;
 
     public KhachHang() {
     }
 
-    public KhachHang(int MaKhachHang, String TenKhachHang, int GioiTinh, String Email, String SDT) {
+    public KhachHang(int MaKhachHang, String TenKHachHang, int GioiTinh, String Email, String SDT) {
         this.MaKhachHang = MaKhachHang;
-        this.TenKhachHang = TenKhachHang;
+        this.TenKHachHang = TenKHachHang;
+
         this.GioiTinh = GioiTinh;
         this.Email = Email;
         this.SDT = SDT;
@@ -45,12 +47,16 @@ public class KhachHang implements Serializable{
         this.MaKhachHang = MaKhachHang;
     }
 
-    public String getTenKhachHang() {
-        return TenKhachHang;
+
+
+
+    public String getTenKHachHang() {
+        return TenKHachHang;
     }
 
-    public void setTenKhachHang(String TenKhachHang) {
-        this.TenKhachHang = TenKhachHang;
+    public void setTenKHachHang(String TenKHachHang) {
+        this.TenKHachHang = TenKHachHang;
+
     }
 
     public int getGioiTinh() {
@@ -76,5 +82,5 @@ public class KhachHang implements Serializable{
     public void setSDT(String SDT) {
         this.SDT = SDT;
     }
-    
+
 }
